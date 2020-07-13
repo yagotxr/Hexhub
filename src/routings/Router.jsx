@@ -8,7 +8,7 @@ class Router extends Component{
         return(
             <BrowserRouter>
             <Switch>
-                <Route path='/login'>
+                <Route path='/'>
                     <LoginPage />
                 </Route>
             </Switch>
