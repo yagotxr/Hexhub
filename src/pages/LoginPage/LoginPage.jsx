@@ -35,7 +35,7 @@ class LoginPage extends Component {
                   <Button shape="round" type="default" size="large">
                     <div>
                       <img src={google} alt="googleIcon" width="20px"></img>
-                      <b>Google</b>
+                      <b> Google</b>
                     </div>
                   </Button>
                 </div>
