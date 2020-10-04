@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Card, Button, Input, Divider } from "antd";
-import logo from "../../assets/images/connect.svg";
+import logo from "../../assets/images/foxter_blue.png";
 import google from "../../assets/images/google.png";
 import "./LoginPage.scss";
 
@@ -24,7 +24,7 @@ class LoginPage extends Component {
                   <Input size="large" placeholder="Password" type='password'/>
                   <br />
                   <br />
-                  <Button shape="round" type="primary" size="large">
+                  <Button shape="round" type="primary" href="/home">
                     <b>Login</b>
                   </Button>
 
