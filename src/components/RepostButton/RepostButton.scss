@@ -2,14 +2,11 @@
     user-select: none;
 }
 
-.repostNumber {
-    padding-left: 7px;
-    display: inline;
-    user-select: none;
-    font-weight: 500;
-}
+$color: #00C855;
 
-.green {
-    color: #00C855;
+.reposted {
+    color: $color;
+    fill: $color;
+    stroke: $color;
     font-weight: 500;
 }

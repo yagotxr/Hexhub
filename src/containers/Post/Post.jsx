@@ -12,17 +12,16 @@ import ShareButton from '../../components/ShareButton/ShareButton';
 class Post extends Component {
     render() {
         return (
-            <div className='post'>
                 <Card style={{
                     borderRadius: "10px",
                     boxShadow: "1px 1px 5px 0px rgba(208, 216, 243, 0.6)"
                 }}>
                     <Row>
                         <Col xs={1}>
-                            <Avatar
+                                <Avatar
                                 icon={<UserOutlined />}
                                 src={this.props.profilePicture}
-                                size={50} />
+                                size={40} />
                         </Col>
                         <Col>
                             <div className='postBody'>
@@ -57,42 +56,7 @@ class Post extends Component {
                             </div>
                         </Col>
                     </Row>
-
-
-                    {/* <div className='cardHeader'>
-                        <Row>
-                            <Avatar
-                                icon={<UserOutlined />}
-                                src={this.props.profilePicture}
-                                size={50} />
-                            <b className='profileName'>{this.props.profileName}</b>
-                            <span className='username'> @{this.props.username} </span>
-                            <span className='postDate'>- 1m</span>
-                            <div className='postContent'>
-                                {this.props.content}
-                            </div>
-                            <div className='postFooter'>
-                                <Col className='action'>
-                                    <LikeButton
-                                        liked={this.props.liked}
-                                        count={this.props.likeCount} />
-                                </Col>
-                                <Col className='action'>
-                                    <RepostButton
-                                        reposted={this.props.reposted}
-                                        count={this.props.repostCount} />
-                                </Col>
-                                <Col className='action'>
-                                    <CommentButton />
-                                </Col>
-                                <Col className='action'>
-                                    <ShareButton />
-                                </Col>
-                            </div>
-                        </Row>
-                    </div> */}
                 </Card>
-            </div>
         );
     }
 }

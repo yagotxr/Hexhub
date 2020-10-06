@@ -1,53 +1,28 @@
-import React, { Component } from 'react'
-import heart from '../../assets/icons/heart.svg'
-import redHeart from '../../assets/icons/redHeart.svg'
+import React, { useState } from 'react'
+import { ReactComponent as Heart } from '../../assets/icons/heart.svg'
 import './LikeButton.scss'
 
-class LikeButton extends Component {
-    constructor(props) {
-        super()
-        this.state = {
-            liked: props.liked,
-            likeCount: props.count
-        }
-        this.handleClick = this.handleClick.bind(this)
-    }
 
-    handleClick = () => {
-        if (!this.state.liked) {
-            this.setState({ liked: true })
-        } else {
-            this.setState({ liked: false })
-        }
-    }
+type Props = {
+    liked: boolean,
+    count: number
+}
 
-    setImage = (liked) => {
-        if (liked) {
-            return redHeart
-        }
-        return heart
-    }
+const LikeButton = ({liked, count} : Props) => {
 
-    setCount = (countColor) => {
-        const count = this.state.likeCount
-        console.log(count)
-        return count !== 0 ?
-        <div className={`likeCount ${countColor}`}>{count}</div>
-        :
-        <></>
-    }
+    const [isLiked, setIsLiked] = useState(true)
+    const amount = useState(count)
+    const isSelected =  isLiked ? 'liked' : 'default'
+    const toggleLike = () => {isLiked ? setIsLiked(false) : setIsLiked(true)}
 
-    render() {
-        let liked = this.state.liked
-        let countColor= liked ? 'red' : 'gray'
-
-        return (
-            <a href onClick={this.handleClick}>
-                <img className='heart' alt='likeButton' src={this.setImage(liked)}></img>
-                {this.setCount(countColor)}
+    return(
+        <div className= {isSelected}>
+            <a href onClick={toggleLike}>
+                <Heart className={`heart ${isSelected}`}/>
+                <span className={`engagementCounter`}>{amount}</span>
             </a>
-        )
-    }
+        </div>
+    )
 }
 
 export default LikeButton

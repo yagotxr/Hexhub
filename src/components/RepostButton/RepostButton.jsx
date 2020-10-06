@@ -1,45 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { ReactComponent as Hexagon } from '../../assets/icons/hexagon.svg'
 import hexagon from '../../assets/icons/hexagon.svg'
-import greenHexagon from '../../assets/icons/greenHexagon.svg'
 import './RepostButton.scss'
 
-class RepostButton extends Component {
-    constructor(props) {
-        super()
-        this.state = {
-            reposted: props.reposted,
-            repostCount: props.count
-        }
-        this.handleClick = this.handleClick.bind(this)
-    }
+type Props = {
+  reposted: boolean,
+  count: number
+}
 
-    handleClick = () => {
-        if (!this.state.reposted) {
-            this.setState({ reposted: true })
-        } else {
-            this.setState({ reposted: false })
-        }
-    }
+const RepostButton = ({ reposted, count } : Props) => {
+  const [isReposted, setReposted] = useState(reposted)
+  const [repostCount, setRepostCount] = useState(count)
+  const toggleRepost = () => { isReposted ? setReposted(false) : setReposted(true) }
+  const isSelected = isReposted ? 'reposted' : 'default'
 
-    setImage = (reposted) => {
-        if (reposted) {
-            return greenHexagon
-        }
-        return hexagon
-    }
-
-    render() {
-        let reposted = this.state.reposted
-        let fontColor = reposted ? 'green' : 'gray'
-        return (
-            <a href onClick={this.handleClick}>
-                <img className='hexagon' alt='respotButton' src={this.setImage(reposted)}></img>
-                <div className={`repostNumber ${fontColor}`}>
-                    <span>{this.state.repostCount}</span>
-                </div>
-            </a>
-        )
-    }
+  return (
+    <div className={isSelected}>
+      <a href onClick={toggleRepost}>
+        <Hexagon className={`hexagon ${isSelected}`} />
+        <span className={`engagementCounter`}>{repostCount}</span>
+      </a>
+    </div>
+  )
 }
 
 export default RepostButton

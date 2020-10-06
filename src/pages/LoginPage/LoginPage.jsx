@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Card, Button, Input, Divider } from "antd";
-import logo from "../../assets/images/foxter_blue.png";
+import logo from "../../assets/images/hexhub.svg";
 import google from "../../assets/images/google.png";
 import "./LoginPage.scss";
 

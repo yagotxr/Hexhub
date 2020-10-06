@@ -1,8 +1,7 @@
-.col {
-    -webkit-column-span: 8;
-}
+$padding-side: 50px;
 
-.midCol {
-    padding-left: 50px;
-    padding-right: 50px;
+.homepage {
+    padding-left: $padding-side;
+    padding-right: $padding-side;
+    margin-top:60px
 }

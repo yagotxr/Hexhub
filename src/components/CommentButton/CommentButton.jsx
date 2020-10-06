@@ -1,26 +1,20 @@
-import React, { Component } from 'react'
-import balloon from '../../assets/icons/message-square.svg'
+import React, { useState } from 'react'
+import { ReactComponent as Balloon } from '../../assets/icons/message-square.svg'
 import './CommentButton.scss'
 
-class CommentButton extends Component {
-    constructor() {
-        super()
-        this.state = {
-            commentCount: 267
-        }
-    }
+const CommentButton = () => {
+  const commentCount = useState(267)
 
-    render() {
-        let commentCount = this.state.commentCount
-        return (
-            <a href='#'>
-                <img className='commentBalloon' alt='commentButton' src={balloon}></img>
-                <div className='commentCount'>
-                    <span>{commentCount}</span>
-                </div>
-            </a>
-        )
-    }
+  return (
+    <div >
+      <a href onClick={()=> window.alert("Comment Modal")}>
+        <Balloon className="commentBalloon" />
+        <div className="engagementCounter default">
+          <span>{commentCount}</span>
+        </div>
+      </a>
+    </div>
+  )
 }
 
 export default CommentButton

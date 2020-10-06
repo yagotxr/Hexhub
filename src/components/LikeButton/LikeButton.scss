@@ -1,15 +1,12 @@
-.heart {
+.heart{
     user-select: none;
 }
 
-.likeCount {
-    padding-left: 7px;
-    display: inline;
-    font-weight: 500;
-    user-select: none;
-}
+$color: red;
 
-.red {
-    color: red;
-    font-weight: 500;
+.liked {
+  color: $color;
+  font-weight: 500;
+  fill: $color;
+  stroke: $color;
 }

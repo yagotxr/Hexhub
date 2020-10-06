@@ -1,0 +1,40 @@
+$padding-sides: 30px;
+$line-heigth: 33px;
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    padding-left: $padding-sides;
+    padding-right: $padding-sides;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 1px 1px 10px 0px rgba(126, 125, 125, 0.6);
+}
+
+.overlay {
+    z-index: 9;
+}
+
+.hexhubImage {
+    width: 130px;
+    float: left;
+}
+
+.menu{
+    line-height: $line-heigth;
+    float: right;
+}
+
+.navLink {
+    padding-left: 20px;
+    display: inline;
+    color: gray;
+}
+
+.location {
+    line-height:$line-heigth;
+}
+

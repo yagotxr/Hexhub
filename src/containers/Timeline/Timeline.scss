@@ -1,6 +1,25 @@
+.timelineActions {
+    padding: 20px;
+    text-align: end;
+}
+
+.engagementCounter {
+    padding-left: 7px;
+    display: inline;
+    font-weight: 500;
+    user-select: none;
+}
+
+.default {
+    color: gray
+}
+
 .location {
     font-weight: bolder;
     margin: auto;
     text-align: left;
-    padding-top: 10px;
+}
+
+.post {
+    padding-bottom: 10px;
 }

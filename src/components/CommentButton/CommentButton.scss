@@ -2,11 +2,7 @@
     user-select: none;
 }
 
-.commentCount {
-    padding-left: 7px;
-    display: inline;
-    font-weight: 500;
-    user-select: none;
-    color: grey;
-
+.commentAction:hover{
+    color: rgb(84, 210, 233);
+    stroke: rgb(84, 210, 233);
 }

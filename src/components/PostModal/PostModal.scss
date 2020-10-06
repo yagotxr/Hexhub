@@ -1,0 +1,19 @@
+.modal-dialog {
+    position: absolute;
+    top: 108px;
+    right: 100px;
+    bottom: 0;
+    left: 0;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+  }
+
+  .form-control {
+      resize: none;
+      border-radius: 25px;
+  }
+
+.inline {
+    display: inline;
+}

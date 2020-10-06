@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
-import shareButton from '../../assets/icons/share.svg'
+import { ReactComponent as Share } from '../../assets/icons/share.svg'
 
-class ShareButton extends Component {
-
-    render(){
-        return(
-            <a>
-                <img alt='shareButton' src={shareButton}></img>
+const ShareButton = () => {
+    return(
+        <div>
+            <a href onClick={() => ''}>
+                <Share />
+                <span className='engagementCounter default'>Share</span>
             </a>
-        )
-    }
+        </div>
+    )
 }
 
 export default ShareButton
