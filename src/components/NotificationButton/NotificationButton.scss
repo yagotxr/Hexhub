@@ -1,0 +1,76 @@
+.n-card {
+    margin-top: 5px;
+    border: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 4px rgba(208, 216, 243, 0.6);
+    background-color: white;
+    z-index: 19;
+    right: 1%;
+    height: 87.5%;
+    width: 400px;
+    position: fixed;
+    user-select: none;
+    overflow: scroll;
+}
+
+.n-card-body {
+    padding-left: 20px;
+    padding-right: 20px;
+    position: static;
+}
+
+.n-card-header {
+    z-index: 100;
+    position: fixed;
+    width: inherit;
+    display: block;
+    padding: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+}
+
+.n-card-title-name {
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 20px;
+    border-bottom: 1px;
+    border-color: gray;
+    float: left;
+}
+
+.n-card-notifications-area{
+    margin-top: 50px ;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.n-content {
+    padding:5px;
+    margin-top: 3px;
+    text-align: left;
+    line-height: 50px;
+    border: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.n-content:hover {
+    background-color: rgba(126, 126, 126, 0.1);
+}
+
+.n-giver {
+    float: left;
+}
+
+.n-giver-action {
+    margin-left: 10px;
+}
+
+.n-card-close-button {
+    float: right;
+}
+
+.hidden {
+    display: none;
+}

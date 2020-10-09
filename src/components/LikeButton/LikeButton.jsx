@@ -2,23 +2,23 @@ import React, { useState } from 'react'
 import { ReactComponent as Heart } from '../../assets/icons/heart.svg'
 import './LikeButton.scss'
 
-
 type Props = {
     liked: boolean,
-    count: number
+    count: number,
 }
 
-const LikeButton = ({liked, count} : Props) => {
-
-    const [isLiked, setIsLiked] = useState(true)
+const LikeButton = ({ liked, count }: Props) => {
+    const [isLiked, setIsLiked] = useState(liked)
     const amount = useState(count)
-    const isSelected =  isLiked ? 'liked' : 'default'
-    const toggleLike = () => {isLiked ? setIsLiked(false) : setIsLiked(true)}
+    const isSelected = isLiked ? 'liked' : 'default'
+    const toggleLike = () => {
+        isLiked ? setIsLiked(false) : setIsLiked(true)
+    }
 
-    return(
-        <div className= {isSelected}>
+    return (
+        <div className={`like-action ${isSelected}`}>
             <a href onClick={toggleLike}>
-                <Heart className={`heart ${isSelected}`}/>
+                <Heart className={`heart ${isSelected}`} />
                 <span className={`engagementCounter`}>{amount}</span>
             </a>
         </div>

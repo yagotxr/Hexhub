@@ -1,8 +1,10 @@
 .commentBalloon {
     user-select: none;
 }
-
-.commentAction:hover{
-    color: rgb(84, 210, 233);
-    stroke: rgb(84, 210, 233);
+.commentBalloon:hover {
+    background-color: rgba(139, 146, 250, 0.2);
+    stroke:rgb(129, 163, 255);
+    background-size: 100px 100px;
+    border-radius: 15%;
 }
+

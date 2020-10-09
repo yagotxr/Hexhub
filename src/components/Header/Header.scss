@@ -23,18 +23,18 @@ $line-heigth: 33px;
     float: left;
 }
 
-.menu{
+.menu {
     line-height: $line-heigth;
     float: right;
 }
 
 .navLink {
-    padding-left: 20px;
+    padding-left: 30px;
     display: inline;
     color: gray;
 }
 
 .location {
-    line-height:$line-heigth;
+    line-height: $line-heigth;
+    font-size: large;
 }
-

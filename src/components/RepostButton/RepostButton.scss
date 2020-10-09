@@ -1,8 +1,15 @@
-.hexagon{
+.hexagon {
     user-select: none;
 }
 
-$color: #00C855;
+$color: #00c855;
+.hexagon:hover {
+    background-color: rgba(139, 250, 144, 0.2);
+    stroke: $color;
+    border-radius: 15%;
+}
+
+
 
 .reposted {
     color: $color;

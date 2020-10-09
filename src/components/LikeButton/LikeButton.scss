@@ -1,12 +1,18 @@
-.heart{
+.heart {
     user-select: none;
+}
+
+.heart:hover {
+    background-color: rgba(250, 139, 139, 0.2);
+    stroke: red;
+    border-radius: 15%;
 }
 
 $color: red;
 
 .liked {
-  color: $color;
-  font-weight: 500;
-  fill: $color;
-  stroke: $color;
+    color: $color;
+    font-weight: 500;
+    fill: $color;
+    stroke: $color;
 }

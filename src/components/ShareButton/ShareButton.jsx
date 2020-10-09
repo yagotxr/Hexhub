@@ -1,12 +1,13 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { ReactComponent as Share } from '../../assets/icons/share.svg'
+import './ShareButton.scss'
 
 const ShareButton = () => {
-    return(
+    return (
         <div>
             <a href onClick={() => ''}>
-                <Share />
-                <span className='engagementCounter default'>Share</span>
+                <Share className="shareIcon"/>
+                <span className="engagementCounter default">Share</span>
             </a>
         </div>
     )

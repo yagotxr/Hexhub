@@ -1,45 +1,54 @@
 import React from 'react'
 import './Header.scss'
+import { Badge } from 'antd'
 import { Row, Col } from 'react-bootstrap'
-import { UserOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons'
 import logo from '../../assets/images/hexhub-logo.png'
-import bell from '../../assets/icons/bell.svg'
 import Avatar from 'antd/lib/avatar/avatar'
+import NotificationButton from '../../components/NotificationButton/NotificationButton'
 
 type Props = {
-    profilePicture: String
+    profilePicture: String,
 }
 
-const Header = ({profilePicture} : Props) => {
+const Header = ({ profilePicture }: Props) => {
     return (
-        <div className='header overlay'>
-            <Row xs={24}>
+        <div className="header overlay">
+            <Row>
                 <Col>
-                    <div className='logo'>
-                        <a href='/home'><img
-                            alt='hexhub Logo'
-                            className='hexhubImage'
-                            src={logo}>
-                        </img>
+                    <div className="logo">
+                        <a href="/home">
+                            <img
+                                alt="hexhub Logo"
+                                className="hexhubImage"
+                                src={logo}
+                            ></img>
                         </a>
                     </div>
                 </Col>
-                <Col>
-                    <span className='location'>Timeline</span>
+                <Col xs={1}>
+                    <span className="location">Timeline</span>
                 </Col>
                 <Col>
-                    <div className='menu'>
-                        <div className='navLink'>
-                            <a>Profile</a>
+                    <div className="menu">
+                        <div className="navLink">
+                            <a href onClick={() => ''}>
+                                Profile
+                            </a>
                         </div>
-                        <div className='navLink'>
-                            <a>Timeline</a>
+                        <div className="navLink">
+                            <a href onClick={() => ''}>
+                                Timeline
+                            </a>
                         </div>
-                        <div className='navLink'>
-                            <a><img src={bell}></img></a>
-                        </div>
-                        <div className='navLink'>
-                            <a><Avatar src={profilePicture} icon={<UserOutlined />} /></a>
+                        <NotificationButton />
+                        <div href className="navLink">
+                            <a href onClick={() => ''}>
+                                <Avatar
+                                    src={profilePicture}
+                                    icon={<UserOutlined />}
+                                />
+                            </a>
                         </div>
                     </div>
                 </Col>

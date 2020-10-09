@@ -1,28 +1,37 @@
 .loginPage {
-  text-align: center;
+    background-color: #0054f6;
+    /*To support older browsers*/
+    height: 100%;
+    width: 100%;
+
+    /* Set the height to match that of the viewport. */
+    height: 100vh;
+
+    /* Set the width to match that of the viewport. */
+    width: 100vw;
+
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.companyName {
-  font-size: 60px;
-  font-family: Helvetica;
+.leftSide {
+    padding-top: 20px;
+}
+
+.loginLogo {
+    margin-top: 340px;
+    margin-left: 300px;
+    width: 300px;
 }
 
 .login {
-    padding-top: 200px;
+    padding-top: 250px;
     padding-left: 50px;
-    padding-right: 150px;
-
+    padding-right: 300px;
 }
 
-.loginCard {
-    padding: 40px;
-    width: 35rem;
-}
-
-.col {
-    column-span: 12;
-}
-
-p {
-    color: #BBBBBB;
+.googleIcon {
+    width: 15px;
+    fill: rgb(49, 49, 49);
+    padding-bottom: 3px;
 }

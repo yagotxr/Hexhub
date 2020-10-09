@@ -1,9 +1,10 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 @import '~antd/dist/antd.css';
 
 body {
     background-color: #fafafa;
     text-align: center;
+    user-select: auto;
 }
 
 .inline {
@@ -13,3 +14,4 @@ body {
 .floatLeft {
     float: left;
 }
+
